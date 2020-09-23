@@ -8,7 +8,6 @@ def evaluate_policy_dp(pi=np.random.randint(2, size=5), transition_probabilities
     env = MarsRover(transition_probabilities=transition_probabilities, rewards=rewards)
     i = 0
     while True:
-        ++i
-
+        i += 1
     print(f"Policy was evaluated in {i} steps with resulting v {v}")
     return v, i
