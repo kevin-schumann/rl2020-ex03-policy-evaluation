@@ -1,0 +1,81 @@
+\documentclass{exam}
+\usepackage{amsmath, amsfonts}
+\usepackage{verbatim}
+\usepackage{graphicx}
+\usepackage[super]{nth}
+
+\DeclareMathOperator*{\argmin}{argmin}
+
+\usepackage[hyperfootnotes=false]{hyperref}
+
+\usepackage[usenames,dvipsnames]{color}
+\newcommand{\note}[1]{
+	\noindent~\\
+	\vspace{0.25cm}
+	\fcolorbox{Red}{Orange}{\parbox{0.99\textwidth}{#1\\}}
+	%{\parbox{0.99\textwidth}{#1\\}}
+	\vspace{0.25cm}
+}
+
+
+%\input{../macros}
+%\renewcommand{\hide}[1]{#1}
+
+\qformat{\thequestion. \textbf{\thequestiontitle}\hfill}
+\bonusqformat{\thequestion. \textbf{\thequestiontitle}\hfill}
+
+\pagestyle{headandfoot}
+
+%%%%%% MODIFY FOR EACH SHEET!!!! %%%%%%
+\newcommand{\duedate}{18.11.2020 (08:00)}
+\newcommand{\due}{{\bf This assignment is due on \duedate.} }
+\firstpageheader
+{Due: \duedate}
+{{\bf\lecture}\\ \assignment{1}}
+{\lectors\\ \semester}
+
+\runningheader
+{Due: \duedate}
+{\assignment{2}}
+{\semester}
+%%%%%% MODIFY FOR EACH SHEET!!!! %%%%%%
+
+\firstpagefooter
+{}
+{\thepage}
+{}
+
+\runningfooter
+{}
+{\thepage}
+{}
+
+\headrule
+\pointsinrightmargin
+\bracketedpoints
+\marginpointname{pt.}
+
+
+\begin{document}
+
+\noindent
+This week you will implement the three different policy evaluation algorithms. They are relatively similar, so pay close attention to their equations. You will also experiment to see the benefits of each one.
+
+\begin{questions}
+	\titledquestion{Dynamic Programming for Policy evaluation} 
+	At first you will complete the methods in \emph{pe\_dynamic\_programming.py} to evaluate a policy given the MDP.  Please use the given method stubs, but you are allowed to add other methods if needed.  
+	
+    \titledquestion{Model-free Policy Evaluation} 
+	Now move on to two policy evaluation algorithms you can use without a model of the MDP.  The lecture should contain all the information you need to complete the code in \emph{pe\_monte\_carlo.py} and \emph{pe\_td\_zero.py}. Again pay attention to the differences between the algorithms and use the method stubs we provide in order to pass the tests. As above, you can also add separate helper methods.
+	
+	\titledquestion{Experiments with Policy Evaluation Algorithms}
+	As in the last week, we now ask you to experiment with the algorithms and note the answers to the following question in \emph{observations.txt}. Please use one line per answer.
+	\begin{itemize}
+		\item Which method is the most accurate?
+		\item Which method takes the most steps to converge?
+		\item What influence does the policy have on the runtime?
+		\item For which policy have you found all algorithms take the smallest number of steps?
+	\end{itemize}
+\end{questions}
+
+\end{document}
